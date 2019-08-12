@@ -488,6 +488,10 @@ footer {
 	/* .somefacts img {
 		margin-top: 36px;
 	} */
+
+	.map-img {
+		height: 220px;
+	}
 }
 @media only screen and (max-width: 800px) {
 	.page {
@@ -546,5 +550,18 @@ footer {
 	}
 	.somefacts img {
 		margin-top: 36px;
+	}
+
+
+		
+	.products .col2:nth-last-of-type(2) {
+		order: 1;
+	}
+	.products .col2:last-child {
+		order: 2;
+	}
+
+	.map-img {
+		height: 130px;
 	}
 }
