@@ -376,6 +376,12 @@ footer {
 	list-style-type: square;
 	line-height: 30px;
 }
+.somefacts img {
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	max-height: 300px;
+}
 /* 
 .somefacts + footer {
 	font-size: 16px;
@@ -471,7 +477,7 @@ footer {
 		padding-left: 10px;
 	}
 
-	.boxes .box.col2, .somefacts .col2 {
+	.boxes .box.col2 {
 		max-width: 100%;
 		flex: 1 1 100%;
 	}
@@ -479,9 +485,9 @@ footer {
 		left: 0;
 		transform: translateX(0);
 	} */
-	.somefacts img {
+	/* .somefacts img {
 		margin-top: 36px;
-	}
+	} */
 }
 @media only screen and (max-width: 800px) {
 	.page {
@@ -532,4 +538,13 @@ footer {
 		padding-left: 0px;
 	}
 
+
+
+	.somefacts .col2 {
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+	.somefacts img {
+		margin-top: 36px;
+	}
 }
