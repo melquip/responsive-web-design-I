@@ -1,3 +1,420 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.page {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+	padding: 92px 74px 60px;
+
+	display: flex;
+	flex-flow: column wrap;
+}
+
+header {
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 1024px;
+	transform: translateX(-50%);
+	padding: 20px 74px;
+	background-color: #fff;
+	
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+section {
+	position: relative;
+	z-index: 1;
+}
+
+nav {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+nav a {
+	font-size: 14px;
+	padding: 19px 67px;
+	padding-left: 0;
+	color: grey;
+	text-decoration: none;
+
+	transition: all .3s ease-in-out;
+}
+
+nav a:hover {
+	color: lightskyblue;
+	text-shadow: 0 0 10px rgba(173,216,230,1);
+	text-decoration: underline;
+}
+
+.logo {
+	background-repeat: no-repeat;
+	background-image: url(../img/logo.png);
+	width: 184px;
+	height: 36px;
+}
+
+.introImg {
+	background-repeat: no-repeat;
+	background-image: url(../img/header-img.png);
+	width: 100%;
+	height: 380px;
+}
+
+.middle-img {
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-image: url(../img/mid-page-accent.jpg);
+	width: 100%;
+	height: 182px;
+}
+
+.map-img {
+	margin-top: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../img/map.jpg);
+	width: 100%;
+	height: 250px;
+}
+
+.services-header-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../img/services-header.jpg);
+	width: 100%;
+	height: 200px;
+}
+
+.zoom {
+    background-size: 100%;
+	transition: background-size 2s ease-in-out;
+}
+.zoom:hover {
+    background-size: 115%;
+}
+
+.intro {
+	padding-top: 40px;
+	padding-bottom: 78px;
+	border-bottom: 1px solid black;
+
+	display: flex;
+	align-items: center;
+}
+.intro .col2:first-child {
+	text-align: center;
+	padding-left: 40px;
+}
+.intro .col2:last-child {
+	padding-left: 58px;
+}
+.intro h1 {
+	margin-top: 16px;
+	font-size: 77px;
+	line-height: 75px;
+}
+
+.button {
+	display: inline-block;
+	border: 1px solid black;
+	font-size: 19px;
+	line-height: 32px;
+	padding: 0 40px;
+
+	color:black;
+	text-decoration: none;
+
+	font-family: "Lacquer", "Titillium Web", sans-serif;
+	transition: all .3s ease-in-out;
+}
+.button:hover {
+	color: white;
+	background-color: black;
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.col1 {
+	width: 100%;
+	max-width: 100%;
+	flex-basis: 100%; 
+}
+.col2 {
+	width: 100%;
+	max-width: 50%;
+	flex-basis: 50%; 
+}
+.col3 {
+	width: 100%;
+	max-width: 33.3333%;
+	flex-basis: 33.3333%;
+}
+
+.about {
+	padding-bottom: 7px;
+	border-bottom: 1px solid black;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.about .col2, .about .col3 {
+	padding-top: 39px;
+	padding-bottom: 38px;
+}
+
+h2, p {
+	font-size: 16px;
+}
+
+p {
+	line-height: 18px;
+}
+
+.col2:nth-of-type(1) {
+	padding-right: 15px;
+}
+.col2:nth-of-type(2) {
+	padding-left: 10px;
+}
+.col3:nth-last-of-type(3) {
+	padding-right: 15px;
+}
+.col3:nth-last-of-type(2) {
+	padding-left: 8px;
+}
+.col3:nth-last-of-type(1) {
+	padding-left: 14px;
+}
 
 
+.contact {
+	padding-top: 40px;
+}
+
+.contact .info {
+	padding-top: 22px;
+}
+
+.contact.detail {
+	border-bottom: 1px solid black;
+	padding-bottom: 40px;
+
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contact.detail .col2 a {
+	display: block;
+	padding-bottom: 10px;
+}
+.contact.detail .col2:nth-child(2) {
+	text-align: right;
+}
+
+footer {
+	padding: 50px 0 50px;
+	text-align: center;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.services {
+	padding-bottom: 39px;
+	border-bottom: 1px solid #000;
+}
+.services h1 {
+	padding-top: 33px;
+	font-size: 26px;
+}
+.services p {
+	line-height: 20px;
+}
+.boxes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: 40px;
+
+	border-bottom: 1px solid #000;
+}
+.boxes .box.col2, .somefacts .col2 {
+	max-width: calc(50% - 18px);
+	flex: 1 1 calc(50% - 18px);
+}
+.boxes .box {
+	padding: 21px;
+	border: 1px solid black;
+	background-color: rgba(0,0,0,.08);
+	margin-bottom: 40px;
+	transition: all .3s ease-in-out;
+}
+.boxes .box:hover {
+	background-color: rgba(0,0,0,.12);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+}
+.box p {
+	padding-top: 3px;
+	line-height: 20px;
+}
+.btn {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 0 40px;
+	border: 1px solid black;
+	background-color: white;
+	border-radius: 5px;
+	font-size: 12px;
+	line-height: 32px;
+	color: black;
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+}
+.btn:hover {
+	color: white;
+	background-color: black;
+}
+
+.somefacts {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: 44px;
+	padding-bottom: 32px;
+}
+.somefacts .col2 {
+	padding: 0;
+}
+.somefacts p {
+	line-height: 20px;
+	padding-right: 20px;
+}
+.somefacts ul {
+	margin-top: 21px;
+}
+.somefacts ul li {
+	list-style-position: inside;
+	list-style-type: square;
+	line-height: 30px;
+}
+
+.somefacts + footer {
+	font-size: 16px;
+}
+
+
+.products {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #000;
+	padding-bottom: 40px;
+}
+.products img {
+	max-width: 100%;
+}
+.products h2 {
+	padding-top: 40px;
+}
+.products p {
+	line-height: 20px;
+	padding-bottom: 15px;
+}
+.products .col2:nth-child(2n) {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.products .col2:nth-last-of-type(2) {
+	order: 2;
+}
+.products .col2:last-child {
+	order: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	.boxes .box.col2, .somefacts .col2 {
+		max-width: 100%;
+		flex: 1 1 100%;
+	}
+	header {
+		left: 0;
+		transform: translateX(0);
+	}
+	.somefacts img {
+		margin-top: 36px;
+	}
+}
