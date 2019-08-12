@@ -240,11 +240,6 @@ nav a:hover {
 .about .col1 {
 	margin-bottom: -4px;
 }
-.about .col2:nth-of-type(2),
-.about .col3:nth-last-of-type(2),
-.about .col3:nth-last-of-type(1) {
-	padding-left: 0;
-}
 
 h2, p {
 	font-size: 16px;
@@ -254,21 +249,21 @@ p {
 	line-height: 18px;
 }
 
-.col2:nth-of-type(1) {
-	padding-right: 15px;
+.col2, .col3 {
+	padding-right: 18px;
 }
-.col2:nth-of-type(2) {
+.intro .col2 {
+	padding-right: 0;
+}
+/* .col2:nth-of-type(2) {
 	padding-left: 10px;
-}
-.col3:nth-last-of-type(3) {
-	padding-right: 15px;
 }
 .col3:nth-last-of-type(2) {
 	padding-left: 8px;
 }
 .col3:nth-last-of-type(1) {
 	padding-left: 14px;
-}
+} */
 
 
 .contact {
